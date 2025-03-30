@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@font-face {
+    font-family: sneakpeak;
+    src: url("../fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf");
+}
+@theme {
+    --font-sneakpeak : sneakpeak , "sans-serif" ;
+}

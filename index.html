@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers | E-commerce Product Page</title>
+    
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32/32x32.jpg">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="mx-6 md:mx-24 flex items-center justify-between p-6 bg-white shadow-md border-b border-gray-200">
+        <div class="text-3xl font-bold font-sans">sneakers</div>
+        <div class="hidden sm:flex space-x-6 text-sm font-medium text-gray-500">
+            <a href="#" class="hover:text-gray-700">Collections</a>
+            <a href="#" class="hover:text-gray-700">Men</a>
+            <a href="#" class="hover:text-gray-700">Women</a>
+            <a href="#" class="hover:text-gray-700">About</a>
+            <a href="#" class="hover:text-gray-700">Contact</a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <i class="ri-shopping-cart-line text-gray-600 text-xl cursor-pointer"></i>
+            <img src="/images/image-avatar.png" alt="User Avatar" class="rounded-full w-10 h-10">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex flex-col md:flex-row items-center justify-center mx-6 md:mx-24 mt-10">
+        
+        <!-- Product Image Section -->
+        <div class="relative w-full md:w-1/2 flex flex-col items-center">
+            <!-- Main Product Image -->
+            <img id="main-image" src="/images/image-product-1.jpg" alt="Product Image"
+                class="rounded-lg w-full md:w-96 shadow-md transition-all duration-300">
+            
+            <!-- Thumbnails -->
+            <div class="flex gap-4 mt-4">
+                <img src="images/image-product-1.jpg" alt="Thumbnail 1" 
+                    class="thumbnail w-16 h-16 rounded-lg object-cover cursor-pointer border-2 border-orange-500 opacity-50"
+                    onclick="changeImage('images/image-product-1.jpg', this)">
+                <img src="images/image-product-2.jpg" alt="Thumbnail 2" 
+                    class="thumbnail w-16 h-16 rounded-lg object-cover cursor-pointer"
+                    onclick="changeImage('images/image-product-2.jpg', this)">
+                <img src="images/image-product-3.jpg" alt="Thumbnail 3" 
+                    class="thumbnail w-16 h-16 rounded-lg object-cover cursor-pointer"
+                    onclick="changeImage('images/image-product-3.jpg', this)">
+                <img src="images/image-product-4.jpg" alt="Thumbnail 4" 
+                    class="thumbnail w-16 h-16 rounded-lg object-cover cursor-pointer"
+                    onclick="changeImage('images/image-product-4.jpg', this)">
+            </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="w-full md:w-1/2 flex flex-col mt-6 md:mt-0 md:ml-12">
+            <h6 class="text-gray-500 font-bold text-xs tracking-wide">SNEAKER COMPANY</h6>
+            <h1 class="text-4xl font-bold pt-4 pb-3">Fall Limited Edition Sneakers</h1>
+            <p class="text-gray-600 text-sm">
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, 
+                they’ll withstand everything the weather can offer.
+            </p>
+
+            <!-- Pricing -->
+            <div class="flex items-center space-x-4 mt-3">
+                <h2 class="font-extrabold text-2xl">$125.00</h2>
+                <span class="bg-black text-white text-sm px-2 py-1 rounded-lg font-bold">50% OFF</span>
+            </div>
+            <h3 class="text-gray-500 line-through font-bold text-sm">$250.00</h3>
+
+            <!-- Quantity & Add to Cart -->
+            <div class="flex flex-col sm:flex-row sm:space-x-4 mt-6">
+                <!-- Quantity Selector -->
+                <div class="bg-gray-100 w-full sm:w-1/2 h-12 flex items-center justify-between px-4 font-bold rounded-lg">
+                    <button onclick="updateQuantity(-1)">
+                        <i class="ri-subtract-fill text-amber-600"></i>
+                    </button>
+                    <span id="quantity" class="text-lg">0</span>
+                    <button onclick="updateQuantity(1)">
+                        <i class="ri-add-line text-amber-600"></i>
+                    </button>
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button class="bg-orange-400 w-full sm:w-1/2 flex items-center justify-center h-12 rounded-lg font-bold text-sm mt-2 sm:mt-0 text-white shadow-md hover:bg-orange-500 transition">
+                    <i class="ri-shopping-cart-line text-white mr-2"></i>
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
